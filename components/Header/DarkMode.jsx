@@ -8,6 +8,7 @@ export default function DarkMode() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
+  // Установка состояния "монтирования"
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
@@ -15,13 +16,9 @@ export default function DarkMode() {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="p-2 rounded-md hover:bg-background transition"
+      className="p-2 rounded-md text-accent hover:bg-accent/10 transition-all"
     >
-      {theme === "dark" ? (
-        <Sun size={20} className="text-background-light" />
-      ) : (
-        <Moon size={20} className="text-primary" />
-      )}
+      {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
     </button>
   );
 }

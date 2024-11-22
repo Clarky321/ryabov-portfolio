@@ -2,33 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Базовые стили */
+/* ---------- Базовые стили ---------- */
 @layer base {
+
+  /* Гладкий скролл для всей страницы */
   html {
     scroll-behavior: smooth;
   }
 
+  /* Базовый шрифт и фон */
   body {
-    @apply font-primary text-primary bg-background; /* Используем шрифт, основной текстовый цвет и фон */
+    @apply font-primary text-primary bg-background leading-loose;
   }
 
+  /* Ссылки */
   a {
-    @apply text-accent hover:text-accent-hover transition-colors; /* Акцентный цвет для ссылок */
+    @apply text-accent hover:text-accent-hover transition-colors;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  /* Заголовки */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-bold;
   }
-}
 
-.dark {
-  @apply text-primary bg-background; /* Тёмная тема */
-}
+  /* Navbar (по умолчанию для тёмной темы) */
+  .header {
+    @apply bg-background text-primary;
+  }
 
-.light {
-  @apply text-black bg-background-light; /* Светлая тема */
-}
+  /* Светлая тема */
+  .light {
+    --tw-bg-opacity: 1;
+    --tw-text-opacity: 1;
 
-header.light {
-  @apply bg-navbar-light; /* Светлый цвет для navbar */
+    /* Фон и текст для светлой темы */
+    @apply text-black bg-background-light;
+  }
+
+  /* Navbar для светлой темы */
+  header.light {
+    @apply bg-navbar-light text-black;
+  }
 }

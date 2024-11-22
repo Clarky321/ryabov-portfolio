@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+// Ссылки для навигации
 const links = [
     { name: "works", path: "/works" },
     { name: "services", path: "/services" },
@@ -14,15 +15,15 @@ export default function Navbar() {
 
     return (
         <nav className="flex space-x-6">
-            {links.map((link, index) => (
+            {links.map((link) => (
                 <Link
+                    key={link.path}
                     href={link.path}
-                    key={index}
-                    className={`text-primary transition-colors ${
-                        link.path === pathname
-                        ? "text-accent underline underline-offset-4" 
-                        : "hover:text-accent-hover"
-                    }`}>
+                    className={`capitalize transition-all ${link.path === pathname
+                        ? "text-accent-hover border-b-2 border-accent"
+                        : ""
+                        }`}
+                >
                     {link.name}
                 </Link>
             ))}
