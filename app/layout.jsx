@@ -6,6 +6,7 @@ import ThemeProvider from "@/components/ThemeProvider";
 
 // Компоненты
 import Header from "@/components/Header/Header";
+import PageTransition from "@/components/PageTransition";
 
 // Подключение шрифта JetBrains Mono
 const jetbrainsMono = JetBrains_Mono({
@@ -29,7 +30,7 @@ export default function RootLayout({ children }) {
             {/* Заголовок страницы */}
             <Header />
             {/* Основной контент */}
-            <main>{children}</main>
+            <PageTransition>{children}</PageTransition>
           </ThemeProvider>
         </div>
       </body>
