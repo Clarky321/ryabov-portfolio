@@ -40,6 +40,10 @@ module.exports = {
           DEFAULT: "#202023", // Тёмный фон
           light: "#F0E7DB",   // Светлый фон
         },
+        backdropBlur: {
+          sm: '4px',
+          lg: '16px',
+        },
         navbar: {
           light: "#f4ede4",   // Светлый фон для Navbar
         },

@@ -3,11 +3,15 @@ import Link from "next/link";
 // Компоненты
 import Navbar from "./Navbar";
 import NavbarMobile from "./NavbarMobile";
-import DarkMode from "./DarkMode";
 
 export default function Header() {
     return (
-        <header className="w-full flex items-center justify-between px-6 py-4 shadow-md transition-colors dark:bg-background dark:text-primary light:bg-navbar-light light:text-black">
+        <header
+            className="sticky top-0 w-full z-50 flex items-center justify-between
+                       px-6 py-4 shadow-md backdrop-blur-lg
+                       dark:bg-background/80 dark:text-primary
+                       light:bg-navbar-light/80 light:text-black"
+        >
             {/* Логотип */}
             <div>
                 <Link href="/" className="text-lg font-bold transition-none">
@@ -22,7 +26,6 @@ export default function Header() {
 
             {/* Переключатель темы и мобильное меню */}
             <div className="flex items-center space-x-4">
-                <DarkMode />
                 <NavbarMobile />
             </div>
         </header>
