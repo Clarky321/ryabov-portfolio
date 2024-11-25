@@ -18,7 +18,15 @@ const jetbrainsMono = JetBrains_Mono({
 // Метаинформация для страницы
 export const metadata = {
   title: "Ryabov Sergey",
-  description: "",
+  description: "Тупо сайт",
+  icons: {
+    icon: [
+      {
+        type: "image/svg+xml",
+        url: "/favicon.svg", // Обновленный путь
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {

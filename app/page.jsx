@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 
 // components
-import PixelArt from "@/components/HomePage/PixelArt";
+import ThreeModel from "@/components/ThreeModel";
 import Avatars from "@/components/HomePage/Avatars";
 import Social from "@/components/HomePage/Social";
 import Biography from "@/components/HomePage/Biography";
@@ -11,15 +11,15 @@ export default function Home() {
     <div className="min-h-screen bg-background text-primary px-4 py-8">
       {/* Основной контейнер с максимальной шириной */}
       <div className="max-w-4xl mx-auto space-y-12">
-        {/* Пиксель арт */}
-        <PixelArt />
+        {/* 3D модель */}
+        <ThreeModel />
 
         {/* Заголовок с аватаром */}
         <div className="flex items-center space-x-6">
           <Avatars />
           <div>
             <h1 className="text-4xl md:text-4xl font-bold">Рябов Сергей Дмитриевич</h1>
-            <h2 className="text-lg md:text-xl text-accent">Веб-разработчик (Человек с большой буквы Р) </h2>
+            <h2 className="text-lg md:text-xl">Веб-разработчик</h2>
           </div>
         </div>
 
@@ -29,14 +29,14 @@ export default function Home() {
             Work
           </h3>
           <p className="text-accent text-left">
-            Takuya is a freelance and a full-stack developer based in Osaka
-            with a passion for building digital services/stuff he wants.
-            He has a knack for all things launching products, from planning
-            and designing all the way to solving real-life problems with code.
-            When not online, he loves hanging out with his camera.
-            Currently, he is living off of his own product called Inkdrop.
-            He publishes content for marketing his products and his YouTube channel
-            called "Dev as Life" has more than 100k subscribers.
+            Появился, значит, в Зоне Чёрный сталкер.
+            К лагерю ночью повадился ходить и там сует руку в палатку и говорит: "Водички попить!"
+            А если не дашь хлебнуть из фляжки или наружу полезешь — пришибет!
+            А раз мужик один решил пошутить: вылез тихо из палатки,
+            надел кожаную перчатку и полез к соседям в палатку. Полез, значит,
+            и попрошайничает жалостно: "Водички, водички попить…"
+            А тут из палатки навстречу высовывается рука и за горло его — цап!
+            И сиплый голосок отзывается тихонько: "А тебе моя водичка зачем нужна?!"
           </p>
 
           <div className="flex items-center justify-center space-x-6 mt-8">
@@ -50,7 +50,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Раздел "Bio" */}
+        {/* Раздел "Биография" */}
         <Biography />
       </div>
     </div>
