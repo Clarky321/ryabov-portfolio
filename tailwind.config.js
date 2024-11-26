@@ -44,10 +44,6 @@ module.exports = {
           sm: '4px',
           lg: '16px',
         },
-        navbar: {
-          light: "#f4ede4",   // Светлый фон для Navbar
-        },
-        primary: "#EDEDED",   // Основной текст (тёмный текст в светлой теме заменится на чёрный)
         accent: {
           DEFAULT: "#ffffff", // Белый акцент
           hover: "#88ccca",   // Голубой акцент при наведении

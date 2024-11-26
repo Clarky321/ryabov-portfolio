@@ -14,7 +14,7 @@ function Model({ path, scale, position, rotation }) {
     // Вращаем модель
     useFrame(() => {
         if (modelRef.current) {
-            modelRef.current.rotation.y += 0.05; // Постепенное увеличение угла
+            modelRef.current.rotation.y += 0.03; // Постепенное увеличение угла
         }
     });
 

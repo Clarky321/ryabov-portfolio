@@ -15,7 +15,7 @@ export default function Header() {
             {/* Логотип */}
             <div>
                 <Link href="/" className="text-lg font-bold transition-none">
-                    Ryabov Sergey
+                    Рябов Сергей
                 </Link>
             </div>
 

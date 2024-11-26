@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
+import { FiDownload } from "react-icons/fi"
 
 // components
 import ThreeModel from "@/components/ThreeModel";
 import Avatars from "@/components/HomePage/Avatars";
 import Social from "@/components/HomePage/Social";
 import Biography from "@/components/HomePage/Biography";
+import GitHubStats from "@/components/HomePage/GitHubStats";
 
 export default function Home() {
   return (
@@ -30,28 +32,36 @@ export default function Home() {
           </h3>
           <p className="text-accent text-left">
             Появился, значит, в Зоне Чёрный сталкер.
-            К лагерю ночью повадился ходить и там сует руку в палатку и говорит: "Водички попить!"
+            К лагерю ночью повадился ходить и там сует руку в палатку и говорит: Водички попить!
             А если не дашь хлебнуть из фляжки или наружу полезешь — пришибет!
             А раз мужик один решил пошутить: вылез тихо из палатки,
             надел кожаную перчатку и полез к соседям в палатку. Полез, значит,
-            и попрошайничает жалостно: "Водички, водички попить…"
+            и попрошайничает жалостно: Водички, водички попить…
             А тут из палатки навстречу высовывается рука и за горло его — цап!
-            И сиплый голосок отзывается тихонько: "А тебе моя водичка зачем нужна?!"
+            И сиплый голосок отзывается тихонько: А тебе моя водичка зачем
           </p>
 
-          <div className="flex items-center justify-center space-x-6 mt-8">
-            <Button variant="default" asChild>
+          <div className="flex flex-col items-center gap-8">
+            {/* Кнопка "Скачать резюме" */}
+            <Button
+              variant="outline"
+              size="lg"
+              className="flex items-center gap-2">
               <a href="/">Скачать резюме</a>
+              <FiDownload className="text-xl" />
             </Button>
+            {/* Социальные иконки */}
             <Social
-              containerStyles="flex space-x-4"
-              iconStyles="hover:text-blue-500 transition-colors"
+              containerStyles="flex gap-6 justify-center"
+              iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent"
             />
           </div>
         </div>
 
         {/* Раздел "Биография" */}
         <Biography />
+
+        <GitHubStats/>
       </div>
     </div>
   );
