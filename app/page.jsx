@@ -15,18 +15,18 @@ export default function Home() {
         <ThreeModel />
 
         {/* Заголовок с аватаром */}
-        <div className="flex items-center space-x-6">
-          <Avatars />
+        <div className="flex items-center justify-between">
           <div>
             <h1 className="text-4xl md:text-4xl font-bold">Рябов Сергей Дмитриевич</h1>
             <h2 className="text-lg md:text-xl">Веб-разработчик</h2>
           </div>
+          <Avatars /> {/* Переместили аватар справа */}
         </div>
 
-        {/* Раздел "Work" */}
+        {/* Раздел "О себе" */}
         <div className="space-y-4">
-          <h3 className="text-xl font-semibold border-b border-accent-light pb-2 text-left">
-            Work
+          <h3 className="text-2xl font-bold text-left border-b border-accent-light pb-2">
+            О себе
           </h3>
           <p className="text-accent text-left">
             Появился, значит, в Зоне Чёрный сталкер.

@@ -14,7 +14,7 @@ function Model({ path, scale, position, rotation }) {
     // Вращаем модель
     useFrame(() => {
         if (modelRef.current) {
-            modelRef.current.rotation.y += 0.3; // Постепенное увеличение угла
+            modelRef.current.rotation.y += 0.05; // Постепенное увеличение угла
         }
     });
 
@@ -33,10 +33,10 @@ export default function ThreeModel() {
     return (
         <section className="flex items-center justify-center h-[400px] rounded-lg">
             <Canvas
-                camera={{ position: [75, 50, 30], fov: 30 }}
+                camera={{ position: [80, 10, 30], fov: 25 }}
             >
                 {/* Модель */}
-                <Model path="/models/maxwell.glb" scale={1.2} position={[0, -1, 0]} rotation={[0, 0, 0]} />
+                <Model path="/models/maxwell.glb" scale={1.2} position={[0, -10, 0]} rotation={[0, 0, 0]} />
 
                 {/* Свет */}
                 <ambientLight intensity={0.5} />
